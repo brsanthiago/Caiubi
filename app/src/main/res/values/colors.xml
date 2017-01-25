@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <!--<color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF4081</color>-->
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/green</color>
+    <color name="colorAccent">@color/pink</color>
+
+
+    <color name="roxo">#3F51B5</color>
+    <color name="dark_roxo">#303F9F</color>
+    <color name="pink">#FF4081</color>
+    <color name="green">#00b35a</color>
+    <color name="black_333">#333333</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grey_light">#8e8e8e</color>
+    <color name="black">#212121</color>
+    <color name="md_grey_500">#9E9E9E</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="dark_gray">#333333</color>
 </resources>

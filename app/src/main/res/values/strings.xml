@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EasyRefund</string>
+    <string name="perfil">Perfil</string>
+    <string name="despesas">Despesas</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="reembolsos">Reembolsos</string>
 </resources>

@@ -10,9 +10,9 @@ import io.realm.exceptions.RealmException;
  * Created by bruno.santiago on 24/01/17.
  */
 
-public class RefundRealm extends RealmObject{
+public abstract class RefundRealm /*extends RealmObject*/{
 
-
+/*
     private int id;
     private int nextId;
 
@@ -38,5 +38,5 @@ public class RefundRealm extends RealmObject{
         return nextId;
     }
 
-
+*/
 }

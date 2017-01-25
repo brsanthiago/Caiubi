@@ -3,12 +3,13 @@ package br.com.brsantiago.refund.model.domain;
 import java.util.Date;
 
 import br.com.brsantiago.refund.model.Categoria;
+import io.realm.annotations.RealmClass;
 
 /**
  * Created by bruno.oliveira on 24/01/17.
  */
-
-public class Refund extends RefundRealm {
+//@RealmClass
+public class Refund /*extends RefundRealm */{
 
     private Categoria categoria;
     private String descricao;
