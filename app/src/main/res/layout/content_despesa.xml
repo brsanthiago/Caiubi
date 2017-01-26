@@ -1,81 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:orientation="vertical"
     tools:showIn="@layout/fragment_despesa">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/frame_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.05"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pref_height"
+            android:layout_marginLeft="@dimen/min_margin"
+            android:minHeight="@dimen/pref_height">
+
+            <LinearLayout
+                android:id="@+id/lnData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/rounded_white"
+                    android:gravity="center"
+                    android:text="04"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:id="@+id/tvMes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/margin_min"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="NOVEMBRO, 2016"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/white">
 
         <LinearLayout
             android:id="@+id/successContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <FrameLayout
-                android:id="@+id/frame_data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:alpha="0.05"
-                    android:background="@color/white" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/pref_height"
-                        android:layout_marginLeft="@dimen/min_margin"
-                        android:minHeight="@dimen/pref_height">
-                        <LinearLayout
-                            android:id="@+id/lnData"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_centerHorizontal="true"
-
-                            android:orientation="vertical">
-
-
-                            <TextView
-                                android:id="@+id/tvData"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="5dp"
-                                android:background="@drawable/rounded_white"
-                                android:gravity="center"
-                                android:layout_gravity="center"
-                                android:text="04"
-                                android:textColor="@color/white"
-                                android:textSize="30sp"
-                                android:textStyle="normal|bold" />
-
-                            <TextView
-                                android:id="@+id/tvMes"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:layout_marginLeft="5dp"
-                                android:text="NOVEMBRO, 2016"
-                                android:layout_marginTop="@dimen/margin_min"
-                                android:maxLines="1"
-                                android:ellipsize="marquee"
-                                android:textColor="@color/white"
-                                android:textSize="18sp" />
-                        </LinearLayout>
-
-                    </RelativeLayout>
-            </FrameLayout>
 
 
             <android.support.v7.widget.RecyclerView
@@ -86,5 +88,5 @@
                 tools:listitem="@layout/item_reembolso" />
 
         </LinearLayout>
-    </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

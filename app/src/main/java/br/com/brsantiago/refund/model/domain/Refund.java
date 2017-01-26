@@ -8,8 +8,7 @@ import io.realm.annotations.RealmClass;
 /**
  * Created by bruno.oliveira on 24/01/17.
  */
-//@RealmClass
-public class Refund /*extends RefundRealm */{
+public class Refund extends RefundRealm {
 
     private Categoria categoria;
     private String descricao;

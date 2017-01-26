@@ -3,8 +3,8 @@
     android:id="@+id/frame_layout_feed_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:clickable="true">
-    <!--android:foreground="?android:attr/selectableItemBackground"-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,89 +13,108 @@
         android:layout_marginRight="@dimen/margin_small"
         android:orientation="vertical">
 
-        <android.support.v4.widget.Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_small" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/tvCategoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="@dimen/text_size_min" />
-
-
-            <TextView
-                android:id="@+id/tvTitulo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="marquee"
-                android:maxLines="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textSize="15sp"
-                android:textStyle="normal" />
-
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/space_min" />
-
-
-            <TextView
-                android:id="@+id/tvContent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ellipsize="marquee"
-                android:maxLines="5"
-                android:textSize="12sp"
-                android:textStyle="normal" />
-
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/space_min" />
+            android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="50dp"
+                android:layout_height="60dp">
 
-                <TextView
-                    android:id="@+id/tvLink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_toLeftOf="@+id/tvData"
-                    android:textColor="@color/md_grey_500"
-                    android:textSize="@dimen/text_size_min" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/light_gray" />
 
-                <TextView
-                    android:id="@+id/tvData"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:textColor="@color/md_grey_500"
+                <RelativeLayout
+                    android:id="@+id/rl_icon"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/rounded_transparent"
+                    android:backgroundTint="@color/colorAccent">
 
-                    android:textSize="@dimen/text_size_min" />
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/category_icon_size"
+                        android:layout_height="@dimen/category_icon_size"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
 
             </RelativeLayout>
 
-            <android.support.v4.widget.Space
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/space_min" />
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TESTE"
+                    android:textSize="@dimen/text_size_pref"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="TESTE"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_min" />
+
+                    <TextView
+                        android:id="@+id/tv_simbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="@dimen/margin_min"
+                        android:layout_toLeftOf="@+id/tv_valor"
+                        android:text="R$"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_min" />
+
+                    <TextView
+                        android:id="@+id/tv_valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="35,50"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/text_size_small" />
+
+
+                </RelativeLayout>
+
+                <View style="@style/Divider" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <android.support.v4.widget.Space
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="@dimen/space_small" />
-
-        <View style="@style/Divider" />
-
+            android:layout_height="5dp" />
     </LinearLayout>
 
 </FrameLayout>
