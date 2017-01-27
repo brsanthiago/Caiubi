@@ -5,7 +5,7 @@
     <dimen name="text_size_min">10sp</dimen>
     <dimen name="text_size_small">12sp</dimen>
     <dimen name="text_size_pref">14sp</dimen>
-    <dimen name="text_size_avg">20sp</dimen>
+    <dimen name="text_size_avg">16sp</dimen>
     <dimen name="text_size_big">25sp</dimen>
     <dimen name="space_min">4dp</dimen>
     <dimen name="space_small">8dp</dimen>
@@ -18,7 +18,7 @@
     <dimen name="margin_small">8dp</dimen>
     <dimen name="dialog_margin">24dp</dimen>
     <dimen name="avatar_size">60dp</dimen>
-    <dimen name="category_icon_size">35dp</dimen>
+    <dimen name="category_icon_size">24dp</dimen>
     <dimen name="icon_size">20dp</dimen>
     <dimen name="padding_avg">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
@@ -26,5 +26,6 @@
     <dimen name="app_bar_height">220dp</dimen>
     <dimen name="min_height">60dp</dimen>
     <dimen name="pref_height">120dp</dimen>
+    <dimen name="avg_height">40dp</dimen>
     <dimen name="min_margin">6dp</dimen>
 </resources>

@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>-->
+    <!--
     <color name="colorPrimary">@color/white</color>
     <color name="colorPrimaryDark">@color/green</color>
-    <color name="colorAccent">@color/pink</color>
+    <color name="colorAccent">@color/pink</color>-->
+
+
+    <color name="colorPrimaryDark">#038acc</color>
+    <color name="colorPrimary">#039BE5</color>
+    <color name="colorBlue">#2278d4</color>
+    <color name="colorAccent">#2278d4</color>
+    <!-- <color name="colorPrimary">#4FC3F7</color>
+     <color name="colorPrimaryDark">#039BE5</color>
+     <color name="colorAccent">#193aff</color>-->
+
+
+
+    <!-- theme colors -->
+    <color name="theme_blue_background">#84ffff</color>
+    <color name="theme_green">#47d247</color>
+    <color name="theme_blue_primary">#4FC3F7</color>
+    <color name="theme_blue_accent">#ff193a</color>
+    <color name="theme_blue_text">@color/text_dark</color>
+    <color name="theme_blue_text_inverse">@android:color/black</color>
+    <color name="theme_blue_primary_dark">#039BE5</color>
+
+    <color name="text_light">@android:color/white</color>
+    <color name="text_dark">#616161</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen">#2278d4</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen">#93c6fd</color>
+
 
 
     <color name="roxo">#3F51B5</color>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EasyRefund.iml" filepath="$PROJECT_DIR$/EasyRefund.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Caiubi.iml" filepath="$PROJECT_DIR$/Caiubi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

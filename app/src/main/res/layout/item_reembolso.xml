@@ -19,21 +19,22 @@
             android:orientation="horizontal">
 
             <RelativeLayout
-                android:layout_width="50dp"
-                android:layout_height="60dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <View
+                    android:id="@+id/view_line"
                     android:layout_width="1dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentTop="true"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:background="@color/light_gray" />
 
                 <RelativeLayout
                     android:id="@+id/rl_icon"
-                    android:layout_width="@dimen/category_icon_size"
-                    android:layout_height="@dimen/category_icon_size"
-                    android:layout_alignParentBottom="true"
+                    android:layout_width="@dimen/avg_height"
+                    android:layout_height="@dimen/avg_height"
+                    android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/rounded_transparent"
                     android:backgroundTint="@color/colorAccent">
@@ -51,25 +52,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_min"
                 android:orientation="vertical">
-
-                <android.support.v4.widget.Space
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp" />
 
                 <TextView
                     android:id="@+id/tv_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TESTE"
-                    android:textSize="@dimen/text_size_pref"
+                    android:textSize="@dimen/text_size_avg"
                     android:textStyle="bold" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp">
+                    android:layout_marginTop="2dp">
 
 
                     <TextView
@@ -80,7 +78,7 @@
                         android:layout_alignParentLeft="true"
                         android:text="TESTE"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/text_size_min" />
+                        android:textSize="@dimen/text_size_small" />
 
                     <TextView
                         android:id="@+id/tv_simbol"
@@ -101,12 +99,11 @@
                         android:layout_alignParentRight="true"
                         android:text="35,50"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="@dimen/text_size_small" />
+                        android:textSize="@dimen/text_size_pref"
+                        android:textStyle="bold" />
 
 
                 </RelativeLayout>
-
-                <View style="@style/Divider" />
 
             </LinearLayout>
 

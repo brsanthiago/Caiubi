@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.brsantiago.refund.R;
+import br.com.brsantiago.refund.model.domain.Despesa;
 import br.com.brsantiago.refund.view.adapters.holders.DespesaHolder;
 
 /**
@@ -19,10 +20,10 @@ import br.com.brsantiago.refund.view.adapters.holders.DespesaHolder;
 public class DespesaAdapter extends RecyclerView.Adapter<DespesaHolder> {
 
 
-    private List<String> despesas = new ArrayList<>();
+    private List<Despesa> despesas = new ArrayList<>();
     private Activity context;
 
-    public DespesaAdapter(Activity context, List<String> despesas) {
+    public DespesaAdapter(Activity context, List<Despesa> despesas) {
         this.despesas = despesas;
         this.context = context;
     }

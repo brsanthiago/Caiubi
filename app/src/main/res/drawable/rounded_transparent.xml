@@ -4,7 +4,7 @@
         <shape android:shape="oval">
             <stroke android:color="@color/white" android:width="2dp" />
             <solid android:color="@color/white"/>
-            <size android:width="@dimen/min_height" android:height="@dimen/min_height"/>
+            <size android:width="@dimen/avg_height" android:height="@dimen/avg_height"/>
         </shape>
     </item>
 </selector>

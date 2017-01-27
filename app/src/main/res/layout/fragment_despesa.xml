@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:animateLayoutChanges="true"
+    android:orientation="vertical"
     tools:context=".view.DespesaFragment">
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,6 +16,73 @@
 
         <include layout="@layout/content_despesa" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/gasoline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="240dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_local_gas_station_white"
+            android:visibility="invisible"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="180dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_restaurant_white"
+            android:visibility="invisible"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="120dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_local_hospital_white"
+            android:visibility="invisible"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_local_taxi_white"
+            android:visibility="invisible"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_add_white"
+            app:backgroundTint="@color/colorAccent"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
     </android.support.design.widget.CoordinatorLayout>
 
 

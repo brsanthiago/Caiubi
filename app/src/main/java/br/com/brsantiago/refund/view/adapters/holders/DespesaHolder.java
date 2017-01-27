@@ -9,13 +9,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-
 import java.util.List;
 
 import br.com.brsantiago.refund.R;
-import br.com.brsantiago.refund.util.RoundedTransformation;
+import br.com.brsantiago.refund.model.domain.Despesa;
+import br.com.brsantiago.refund.util.DataUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -37,11 +35,13 @@ public class DespesaHolder extends RecyclerView.ViewHolder {
     public ImageView ivIcon;
     @BindView(R.id.rl_icon)
     public RelativeLayout rlIcon;
+    @BindView(R.id.view_line)
+    public View viewLine;
     private View view;
     private Activity context;
-    private List<String> despesas;
+    private List<Despesa> despesas;
 
-    public DespesaHolder(final List<String> despesas, final View view, final Activity context) {
+    public DespesaHolder(final List<Despesa> despesas, final View view, final Activity context) {
         super(view);
         ButterKnife.bind(this, view);
         this.context = context;
@@ -50,22 +50,21 @@ public class DespesaHolder extends RecyclerView.ViewHolder {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void setDados(final int position) {
-        tvDate.setText("25/01/2017");
-        tvDescription.setText("Teste de Descrição");
-        tvSymbol.setText("R$");
-        tvValor.setText("17,50");
-        int iconId = R.drawable.ic_local_taxi_white;
-        if ((position % 2) == 0) {
-            iconId = R.drawable.ic_local_hospital_white;
+        final Despesa despesa = despesas.get(position);
+        tvDate.setText(DataUtil.formatData(despesa.getData()));
+        tvDescription.setText(despesa.getDescricao());
+        tvSymbol.setText(despesa.getMoeda());
+        tvValor.setText(despesa.getValor().toString());
+        int i = (position % 2);
+        if (i == 0) {
+            ivIcon.setImageDrawable(context.getDrawable(R.drawable.ic_local_hospital_white));
+        } else {
+            ivIcon.setImageDrawable(context.getDrawable(R.drawable.ic_local_taxi_white));
         }
 
-        Glide.with(context).load(iconId)
-                .thumbnail(0.5f)
-                .crossFade()
-                .error(R.drawable.ic_car_white)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .bitmapTransform(new RoundedTransformation(context, 35, 0))
-                .into(ivIcon);
+        if (position == despesas.size() - 1) {
+            viewLine.setVisibility(View.GONE);
+        }
 
     }
 
